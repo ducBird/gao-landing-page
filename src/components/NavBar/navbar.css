@@ -1,0 +1,7 @@
+.text-effect:hover {
+  text-shadow: rgb(48, 43, 99) 3px 5px 15px;
+}
+
+.text-effect-desk:hover {
+  text-shadow: rgb(99 102 241) 3px 5px 15px;
+}
