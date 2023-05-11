@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Content from "./components/Content";
+import Features from "./components/Features";
+import Introduction from "./components/Introduction";
 import NavBar from "./components/NavBar";
 import Slogan from "./components/Slogan";
+import "animate.css";
+import Abouts from "./components/Features/Abouts";
 
 function App() {
   const [windowSize, setWindowSize] = useState({
@@ -32,11 +36,15 @@ function App() {
     }
     // console.log(windowSize);
   }, [windowSize]);
+
   return (
-    <div className="h-screen overflow-y-auto overflow-x-hidden bg-gradient-to-b dark:from-dark-800 dark:via-dark-600 dark:to-dark-400 font-sora from-white to-dark-400 dark:text-white text-dark-800 px-4 py-8">
+    <div className="overflow-y-auto overflow-x-auto bg-gradient-to-b dark:from-dark-800 dark:via-dark-600 dark:to-dark-400 font-sora from-white to-dark-400 dark:text-white text-dark-800 px-4 py-8">
       <NavBar isMobile={isMobile} />
       <Slogan />
+      {/* <Abouts /> */}
       <Content />
+      <Introduction />
+      <Features />
     </div>
   );
 }

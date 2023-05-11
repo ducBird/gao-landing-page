@@ -4,8 +4,8 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { MdOutlineClose } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 import "./navbar.css";
-import "animate.css";
 import useDarkMode from "../../hooks/useDarkMode";
+
 function NavBar(props) {
   const [openMenu, setOpenMenu] = useState(false);
   const [isDarkMode, toggleDarkMode] = useDarkMode();
@@ -21,14 +21,14 @@ function NavBar(props) {
           <BsSunFill
             size={"24px"}
             color="#e9c46a"
-            className="cursor-pointer"
+            className="cursor-pointer animate-bounce"
             onClick={() => toggleDarkMode(!isDarkMode)}
           />
         ) : (
           <FaMoon
             size={"24px"}
             color="#e9c46a"
-            className="cursor-pointer"
+            className="cursor-pointer animate-bounce"
             onClick={() => toggleDarkMode(!isDarkMode)}
           />
         )}
@@ -71,7 +71,7 @@ function NavBar(props) {
           </>
         )}
         {openMenu && (
-          <div className="absolute right-8 bg-white p-8 text-center text-black text-13">
+          <div className="absolute right-8 bg-white p-8 text-center text-black text-13 w-[150px]">
             <li
               className={`text-effect cursor-pointer hover:text-indigo-700 transition-all duration-300`}
             >
